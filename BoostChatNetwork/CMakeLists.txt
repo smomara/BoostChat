@@ -19,6 +19,7 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
         PUBLIC
             ws2_32
+            wsock32
         PRIVATE
             ${Boost_LIBRARIES}
 )
