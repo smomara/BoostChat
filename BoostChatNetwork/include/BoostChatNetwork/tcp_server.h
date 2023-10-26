@@ -1,6 +1,10 @@
 #pragma once
 
+#include <vector>
+
 #include <boost/asio.hpp>
+
+#include <BoostChatNetwork/tcp_connection.h>
 
 namespace BoostChat{
     enum class IPV {
@@ -21,5 +25,7 @@ namespace BoostChat{
 
         boost::asio::io_context _ioContext;
         boost::asio::ip::tcp::acceptor _acceptor;
+
+        std::vector<TCPConnection::pointer> _connections {};
     };
 }

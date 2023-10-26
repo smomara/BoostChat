@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-#include <BoostChatNetwork/tcp_connection.h>
-
 namespace BoostChat {
     using boost::asio::ip::tcp;
     TCPServer::TCPServer(IPV ipv, int port) : _ipVersion(ipv), _port(port),
@@ -26,7 +24,9 @@ namespace BoostChat {
         // Create a connection
         auto connection = TCPConnection::Create(_ioContext);
 
-        // Async connect the acception
+        _connections.push_back(connection);
+
+        // Async connect
         _acceptor.async_accept(connection->Socket(), [connection, this](const boost::system::error_code& error) {
             if (!error) {
                 connection->Start();
