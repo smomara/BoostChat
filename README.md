@@ -1,8 +1,2 @@
-# BoostChat: C++ TCP Char Client and Server using Boost
-WIP!
-
-This project is a C++ TCP chat client and server using Boost ASIO.
-
-My goal for the project is to gain a basic understanding of networking and the Boost library.
-
-This repository includes a simple chat client and server.
+# BoostChat: C++ TCP Chat Client and Server using Boost ASIO
+This project was initiated with the primary goal of learning network programming in C++ with Boost ASIO. I also aimed to implement modern C++ standards.
